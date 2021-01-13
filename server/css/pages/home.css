@@ -1,0 +1,8 @@
+@import "../bootstrap/bootstrap.min.css" all;
+
+header {
+	background-color: #c7c7c7;
+	text-align: center;
+	border-bottom: 1px solid black;
+	box-shadow: 0px 1px 3px black;
+}

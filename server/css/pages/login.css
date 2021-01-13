@@ -1,0 +1,60 @@
+@import "../bootstrap/bootstrap.min.css" all;
+body {
+    background-color: #222;
+    color: white;
+}
+header {
+    background-color: #333;
+}
+.wrapper {
+    width: 500px;
+    padding: 40px;
+}
+.wrapper form .form-group span {
+    color: red;
+}
+.credentials {
+    background-color: #333;
+    border-radius: 20px;
+}
+input:focus {
+    outline: none !important;
+    box-shadow: none;
+    border: none;
+}
+.login-button {
+    color: white;
+    font-size: 20px;
+    background-color: #7298da;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 90px 5px 90px;
+    outline: none !important;
+    border: none;
+}
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+footer {
+    position: fixed;
+    color: black;
+    bottom: -2%;
+    background-color: white;
+    border-right: 1px solid black;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-top: 1px solid black;
+    box-shadow: -1px 1px 3px black;
+}
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+a:link {
+    color: black;
+}
