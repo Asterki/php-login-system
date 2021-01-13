@@ -1,0 +1,27 @@
+@keyframes blink {
+	0% { color: #222; text-shadow: 1px 1px 2px black; }
+	4% { color: white; text-shadow: 1px 1px 2px white; }
+	8% { color: #222; text-shadow: 1px 1px 2px black; }
+	12% { color: white; text-shadow: 1px 1px 2px white; }
+	16% { color: #222; text-shadow: 1px 1px 2px black; }
+	24% { color: #222; text-shadow: 1px 1px 2px black; }
+	28% { color: white; text-shadow: 1px 1px 2px white; }
+	32% { color: #222; text-shadow: 1px 1px 2px black; }
+	36% { color: #222; text-shadow: 1px 1px 2px black; }
+	40% { color: white; text-shadow: 1px 1px 2px white; }
+	44% { color: #222; text-shadow: 1px 1px 2px black; }
+	48% { color: #222; text-shadow: 1px 1px 2px black; }
+	52% { color: white; text-shadow: 1px 1px 2px white; }
+	56% { color: #222; text-shadow: 1px 1px 2px black; }
+	60% { color: #222; text-shadow: 1px 1px 2px black; }
+	64% { color: #222; text-shadow: 1px 1px 2px black; }
+	68% { color: white; text-shadow: 1px 1px 2px white; }
+	72% { color: #222; text-shadow: 1px 1px 2px black; }
+	76% { color: white; text-shadow: 1px 1px 2px white; }
+	80% { color: #222; text-shadow: 1px 1px 2px black; }
+	86% { color: white; text-shadow: 1px 1px 2px white; }
+	90% { color: #222; text-shadow: 1px 1px 2px black; }
+	94% { color: #222; text-shadow: 1px 1px 2px black; }
+	94% { color: white; text-shadow: 1px 1px 2px white; }
+	100% { color: #222; text-shadow: 1px 1px 2px black; }
+}

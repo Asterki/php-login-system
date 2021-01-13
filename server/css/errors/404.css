@@ -1,0 +1,17 @@
+@import "../bootstrap/bootstrap.min.css" all;
+@import "../animations/blink.css" all;
+
+body {
+	background-color: #333;
+	color: white;
+}
+
+.error-code {
+	animation: blink;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	font-size: 200px;
+}
+
+a:link { color: white }
+a:visited { color: white }
