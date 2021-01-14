@@ -85,21 +85,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 	<meta charset="UTF-8">
 	<title>Sign in</title>
-	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
-	<style>
-        .wrapper{
-        	width: 500px;
-        	padding: 20px;
-        }
-        .wrapper h2 {text-align: center}
-        .wrapper form .form-group span {color: red;}
-	</style>
+    <link rel="icon" type="image/png" href="../../server/assets/icon.png">
+	<link rel="stylesheet" type="text/css" href="../../server/css/pages/register.css">
 </head>
 <body>
 	<main>
-		<section class="container wrapper">
-			<h2 class="display-4 pt-3">Sign Up</h2>
-        	<p class="text-center">Please fill in your credentials.</p>
+		<section class="container wrapper credentials centered">
+			<h2 class="text-center"><b>Sign Up</b></h2><br>
         	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         		<div class="form-group <?php (!empty($username_err)) ? 'has_error' : '';?>">
         			<label for="username">Username</label>
@@ -117,13 +109,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         			<label for="confirm_password">Confirm Password</label>
         			<input type="password" name="confirm_password" id="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
         			<span class="help-block"><?php echo $confirm_password_err; ?></span>
-        		</div>
+        		</div><br>
 
         		<div class="form-group">
-        			<input type="submit" class="btn btn-block btn-outline-success" value="Submit">
-        			<input type="reset" class="btn btn-block btn-outline-primary" value="Reset">
+        			<input type="submit" class="btn btn-block sign-in-button" value="Submit">
+        			<input type="reset" class="btn btn-block reset-button" value="Reset">
         		</div>
-        		<p>Already have an account? <a href="../login/">Login here</a>.</p>
+        		<p class="login">Already have an account? <a href="../login/">Login here</a>.</p>
         	</form>
 		</section>
 	</main>

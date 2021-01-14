@@ -32,11 +32,16 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="password"], 
 .error {
     color: #ff1c1c;
 }
-.login-button {
+.sign-in-button {
     background-color: #7298DA;
     color: white;
     border-radius: 3px;
 }
-.register {
-    font-size: 13px !important;
+.reset-button {
+    background-color: #222;
+    color: white;
+    border-radius: 3px;
+}
+.login {
+    font-size: 13px;
 }

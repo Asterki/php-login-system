@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: ../home");
+    header("location: ../home/");
     exit;
 }
 
@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = trim($_POST['username']);
     }
 
+    // Check if password is empty
     if (empty(trim($_POST['password']))) {
         $password_err = 'Please enter your password.';
     } else {
@@ -50,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $_SESSION['id']       = $id;
                             $_SESSION['username'] = $username;
 
-                            header('location: ../home');
+                            header('location: ../home/');
                         } else {
                             $password_err = 'Invalid password';
                         }
@@ -70,60 +71,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-            <title>
-                Sign in
-            </title>
-            <link href="../../server/css/pages/login.css" rel="stylesheet" type="text/css">
-                <link href="../../server/assets/icon.png" rel="icon" type="image/png">
-                </link>
-            </link>
-        </meta>
-    </head>
-    <body class="theme-light">
-        <header>
-            <p class="text-center">
-                Please fill this form to login to your account.
-            </p>
-        </header>
-        <section class="container wrapper credentials centered">
-            <h3 class="text-center">Test Site</h3>
+   <head>
+      <meta charset="UTF-8">
+      <link rel="icon" type="image/png" href="../../server/assets/icon.png">
+      <title>Login</title>
+      <link rel="stylesheet" type="text/css" href="../../server/css/pages/login.css">
+   </head>
+   <body>
+      <main>
+         <section class="container wrapper credentials centered">
+            <h2 class="text-center"><b>Login</b></h2><br>
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-                <div class="form-group <?php (!empty($username_err)) ? 'has_error' : '';?>"><br>
-                    <label for="username" class="text-center">
-                        Username
-                    </label>
-                    <input class="form-control" id="username" name="username" required autocomplete type="text" value="<?php echo $username ?>">
-                        <span class="help-block">
-                            <?php echo $username_err; ?>
-                        </span>
-                    </input>
-                </div>
-                <div class="form-group <?php (!empty($password_err)) ? 'has_error' : '';?>"><br>
-                    <label for="password">
-                        Password
-                    </label>
-                    <input class="form-control" id="password" name="password" required autocomplete type="password" value="<?php echo $password ?>">
-                        <span class="help-block">
-                            <?php echo $password_err; ?>
-                        </span>
-                    </input>
-                </div><br>
-                <div class="form-group">
-                    <input class="login-button" type="submit" value="Login">
-                    </input>
-                </div>
+               <div class="form-group <?php (!empty($username_err)) ? 'has_error' : '';?>">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" class="form-control" autocomplete value="<?php echo $username ?>">
+                  <span class="help-block error"><?php echo $username_err; ?></span>
+               </div>
+               <div class="form-group <?php (!empty($password_err)) ? 'has_error' : '';?>">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control" autocomplete value="<?php echo $password ?>">
+                  <span class="help-block error"><?php echo $password_err; ?></span>
+               </div>
+               <div class="form-group"><br>
+                  <input type="submit" class="btn btn-block login-button" value="login">
+               </div>
+               <p class="register">Don't have an account? <a href="../register/">Sign up</a>.</p>
             </form>
-        </section>
-        <footer>
-            <p>
-                Don't have an account?
-                <a href="../register">
-                    Sign in
-                </a>
-                .
-            </p>
-        </footer>
-    </body>
+         </section>
+      </main>
+   </body>
 </html>
+
